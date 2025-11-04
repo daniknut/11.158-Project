@@ -112,7 +112,7 @@ def main():
 
     out_path = RAW_DATA_DIR / "reddit_mbta_raw.csv"
     df.to_csv(out_path, index=False)
-    print(f"✅ Saved {len(df)} posts to {out_path.relative_to(PROJECT_ROOT)}")
+    print(f"Saved {len(df)} posts to {out_path.relative_to(PROJECT_ROOT)}")
 
 if __name__ == "__main__":
     main()

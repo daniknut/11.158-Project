@@ -89,7 +89,7 @@ def main():
     df = fetch_alerts(start_dt, end_dt)
     out_path = RAW_DATA_DIR / "mbta_alerts_raw.csv"
     df.to_csv(out_path, index=False)
-    print(f"✅ Saved {len(df)} alerts to {out_path.relative_to(PROJECT_ROOT)}")
+    print(f"Saved {len(df)} alerts to {out_path.relative_to(PROJECT_ROOT)}")
 
 if __name__ == "__main__":
     main()

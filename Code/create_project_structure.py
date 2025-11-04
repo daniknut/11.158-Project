@@ -16,7 +16,7 @@ def create_structure(root: Path):
     for f in folders:
         path = root / f
         path.mkdir(parents=True, exist_ok=True)
-        print(f"✅ Created {path.relative_to(root)}")
+        print(f"Created {path.relative_to(root)}")
 
     # README
     readme_path = root / "README.md"
@@ -36,7 +36,7 @@ def create_structure(root: Path):
         See `Data/data_dictionary.md` for variable definitions.
         """).strip() + "\n"
         readme_path.write_text(readme_text)
-        print("✅ Created README.md")
+        print("Created README.md")
 
     # Data dictionary stub
     data_dict_path = root / "Data" / "data_dictionary.md"
@@ -73,7 +73,7 @@ def create_structure(root: Path):
         (Add to and refine this as you go!)
         """).strip() + "\n"
         data_dict_path.write_text(data_dict_text)
-        print("✅ Created Data/data_dictionary.md")
+        print("Created Data/data_dictionary.md")
 
 
 if __name__ == "__main__":

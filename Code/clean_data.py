@@ -49,7 +49,7 @@ def clean_reddit():
 
     out_path = PROC_DIR / "reddit_mbta_clean.csv"
     df.to_csv(out_path, index=False)
-    print(f"✅ Saved cleaned Reddit to {out_path.relative_to(PROJECT_ROOT)}")
+    print(f"Saved cleaned Reddit to {out_path.relative_to(PROJECT_ROOT)}")
 
 def clean_mbta_alerts():
     in_path = RAW_DIR / "mbta_alerts_raw.csv"
@@ -75,7 +75,7 @@ def clean_mbta_alerts():
 
     out_path = PROC_DIR / "mbta_alerts_clean.csv"
     df.to_csv(out_path, index=False)
-    print(f"✅ Saved cleaned MBTA alerts to {out_path.relative_to(PROJECT_ROOT)}")
+    print(f"Saved cleaned MBTA alerts to {out_path.relative_to(PROJECT_ROOT)}")
 
 def clean_weather():
     in_path = RAW_DIR / "weather_boston_raw.csv"
@@ -95,7 +95,7 @@ def clean_weather():
 
     out_path = PROC_DIR / "weather_boston_clean.csv"
     df.to_csv(out_path, index=False)
-    print(f"✅ Saved cleaned weather to {out_path.relative_to(PROJECT_ROOT)}")
+    print(f"Saved cleaned weather to {out_path.relative_to(PROJECT_ROOT)}")
 
 def main():
     clean_reddit()
