@@ -56,7 +56,9 @@ def build_topic_model():
     # Use a lightweight sentence transformer for embeddings
     emb_model = SentenceTransformer("all-MiniLM-L6-v2")
     # Add stop words to remove common MBTA-related terms and focus on specific complaints
-    stop_words = ["mbta", "rail", "bus", "transit", "trains", "boston", "station", "train", "commuter", "going", "ride", "t", "red", "blue", "green", "orange", "silver", "line", "subway", "metro"]
+    general_transit_words = ["mbta", "rail", "bus", "transit", "trains", "boston", "station", "train", "commuter", "going", "ride", "t", "red", "blue", "green", "orange", "silver", "line", "subway", "metro"]
+    general_words = ["do", "had"]
+    stop_words = general_transit_words + general_words
     vectorizer_model = CountVectorizer(stop_words=stop_words)
     topic_model = BERTopic(
         representation_model=rep_model,
