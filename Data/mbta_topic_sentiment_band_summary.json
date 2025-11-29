@@ -1,0 +1,9 @@
+{
+  "n_topics":56.0,
+  "near_zero_or_positive":7.0,
+  "mildly_negative":19.0,
+  "strongly_negative":30.0,
+  "near_zero_or_positive_prop":0.125,
+  "mildly_negative_prop":0.3392857143,
+  "strongly_negative_prop":0.5357142857
+}
